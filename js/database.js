@@ -1,7 +1,6 @@
 var Datastore = require('nedb');
 db = new Datastore({ filename: 'db/entries.db', autoload: true, timestampData: true });
 
-
 exports.addEntry = function(content) {
 	var contentTagged = content.toLowerCase();
 		contentTagged = contentTagged.replace(/\s{2,}/g," ");
@@ -21,11 +20,10 @@ exports.addEntry = function(content) {
 		}); 
 	}; 
 
-
-// Returns all entries
+// Returns all entries ... hey, neat - passing functions as parameters!
 exports.getEntries = function(fnc) {
 
-  // Get all persons from the database
+  // Get all posts from the database
   db.find({}).sort({createdAt: -1}).exec(function(err, docs) {
 
     // Execute the parameter function
@@ -36,8 +34,8 @@ exports.getEntries = function(fnc) {
 
 // Formats entries into HTML
 // ready to be added into document
-
 exports.formatEntries = function(entr) {
+	// Formatting the date ... possibly reinventing the wheel here 
 	var monthNames = [
 	"January", "February", "March",
     "April", "May", "June", "July",
@@ -145,7 +143,8 @@ exports.deleteComment = function (id, commentContent) {
 
 exports.editComment = function (id, oldComment, newComment) {
 	db.findOne({_id: id}, function (err, doc) {
-		var indexToEdit = doc.comments.indexOf(oldComment/*+" "*/);
+		var indexToEdit = doc.comments.indexOf(oldComment);
+//		alert(indexToEdit); testing the next level - is it recognizing in the array
 		doc.comments[indexToEdit] = newComment; 
 		var newDocComments = doc.comments;
 		db.update({ _id: id }, { $set: {comments: newDocComments} }, {}, function () { 
@@ -164,7 +163,6 @@ exports.deleteEntry = function(id) {
 exports.search = function(queries) {
 	var queries = queries.toLowerCase();
 	queries = queries.split(", ");
-	// db - want this to be AND w/ the tags, has to include all of whatever's there -- 
 	if (queries.length > 1) {
 	var qstring = "{$and: [{";
 	var qstringAddn = "";
