@@ -1,0 +1,95 @@
+textarea {
+	resize: none;
+	border: none; 	outline: none; 
+	/*color: green; */
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	display: block;
+	font-size: 15px;
+	font-family: "courier new";
+}
+
+.searching {
+  display: inline-block;
+  margin-left: 10%; margin-right: 10%;
+  box-sizing: content-box;
+  padding: 3px 10px;
+  border: 2px solid #b7b7b7;
+  border-radius: 18px;
+  text-overflow: clip;
+ /* background: rgba(252,252,252,1); */
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  outline: none; 
+}
+
+.write-entry {
+	margin-top: 30px;
+	margin-bottom: 35px;
+/*	border-right-style: solid; border-left-style: solid;
+	border-color: black;
+	border: 1px; */
+}
+
+#stream, #quote-stream, #search-stream {
+	font-family: "Helvetica";
+	/* width: 75%; */
+	/* margin: 0 auto; */
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+.entry, .quote-entry {
+	border-style: solid;
+	border-top: 1px solid; /*solid #999*/
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: none;
+	margin-bottom: 0px; padding-bottom: 0px;
+	margin-top: 0px; padding-top: 0px;
+}
+
+.entry:hover, .quote-entry:hover {
+	background-color: #f6f6f6  !important; /*#F1A9A0 */
+}
+
+.entry-content, .quote-entry-content {
+	margin-top: 15px; 
+	margin-bottom: 5px;
+	font-size: 15px;
+}
+
+.quote-entry {padding-bottom: 8px;}
+
+.quote-entry-content{
+	padding-left: 10%; padding-right: 10%;
+}
+
+.entry-date {
+	padding-top: 5px;
+	font-size: 12px;
+	margin-right: 5%;
+	text-align: right;
+}
+
+.entry-footer {
+	margin-top: 10px;
+	text-align: center;
+	padding-bottom: 8px;
+	/*display: none;*/
+}
+
+.delete-btn {
+	border: none;
+	background-color: #fff0f0;
+}
+
+.comment, #tempComment {
+	margin-left: 15%; margin-right: 15%;
+}
+
+.comment {
+	font-size: 13px;
+	padding-bottom: 8px;
+}

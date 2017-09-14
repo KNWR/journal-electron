@@ -1,0 +1,40 @@
+::selection {
+	background: #E74C3C/*2C3E50 */;
+	color: white;
+	}
+	
+/*.titlebar {
+	display: block;
+	position: relative;
+	height: 14px;
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-width: 100%;
+	background-color: white;
+	-webkit-app-region: drag;
+	-webkit-user-select: none;
+} */
+
+textarea {
+	resize: none;
+	border: none; 	outline: none; 
+	/*color: green; */
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	display: block;
+	font-size: 15px;
+	font-family: "courier new";
+}
+
+.write-entry {
+	margin-top: 30px;
+	margin-bottom: 35px;
+/*	border-right-style: solid; border-left-style: solid;
+	border-color: black;
+	border: 1px; */
+}
+
+::-webkit-scrollbar { width: 0 !important }

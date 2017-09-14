@@ -1,0 +1,35 @@
+<head>
+	<title>Journal</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/stream.css">
+	 <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<div id="topbar">
+	<div id="searchbar">
+		<input onclick="clientSearch()" class="searching" id="searchInput" type="search"> </input>
+		<button onclick="quoteMode()">Quotes</button>
+		<button onclick="writeMode()">Write</button>
+	</div>
+</div>
+
+<div class="write-entry">
+	<div class="write-entry-content"> <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" rows="5" form="write-entry-form" id="write-entry-content-id" placeholder="Entry Content" onclick="writeEntry()" autofocus> </textarea> </div>
+</div>
+
+<div id="stream-container">
+	<div id="stream">
+	<!-- Sample entry to test what it looks like -->
+	<!-- <div class="entry">
+		<div class="entry-title">Defying Gravity/div> 		<div class="entry-date">12 May 2017</div>
+		<div class="entry-content">
+			Conforming to the group is like gravity: we can jump and jump and jump, even trampoline, but it’s hard, and we can’t stay up there forever. Sooner or later, we always come back down to Earth.<br><br>
+			Significantly easier, in the long run, is to choose where we’re landing. It’ll be where we spend most of our time. We can choose our group and our place in it.<br><br>
+			It turns out this is true of a lot more than our groups. We regress to the means of our lives: the averages of our habits, our work, our play.<br><br>
+			How we do anything is how we do everything. So, we can fight gravity — or let it take us where we want to go. That sounds as good as flying to me.
+		</div>
+	</div> -->
+	</div>
+<div id="quote-stream"></div>
+<div id="search-stream"></div>
+</div>
